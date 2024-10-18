@@ -34,7 +34,7 @@ const config: HardhatUserConfig = {
       },
     ],
   },
-  defaultNetwork: "localhost",
+  defaultNetwork: "baseSepolia",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -111,6 +111,7 @@ const config: HardhatUserConfig = {
     baseSepolia: {
       url: "https://sepolia.base.org",
       accounts: [deployerPrivateKey],
+      
     },
     scrollSepolia: {
       url: "https://sepolia-rpc.scroll.io",
@@ -131,8 +132,10 @@ const config: HardhatUserConfig = {
   },
   // configuration for harhdat-verify plugin
   etherscan: {
-    apiKey: `${etherscanApiKey}`,
+     apiKey: `${etherscanApiKey}`,
   },
+
+
   // configuration for etherscan-verify from hardhat-deploy plugin
   verify: {
     etherscan: {
